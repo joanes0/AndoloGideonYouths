@@ -155,24 +155,23 @@
 </div>
 
 <script>
-  // ---------- HERO CAROUSEL ----------
+  // HERO CAROUSEL
   const slides = document.querySelectorAll('.hero-slide');
   let currentSlide = 0;
   if (slides.length) { slides[0].classList.add('active'); setInterval(() => { slides.forEach(s => s.classList.remove('active')); currentSlide = (currentSlide+1)%slides.length; slides[currentSlide].classList.add('active'); }, 5000); }
 
-  // ---------- PROJECTS DATA (including Children's Home) ----------
+  // ---------- PROJECTS DATA WITH UPDATED LOCAL IMAGES ----------
   const projects = [
     { id:1, name:"WASH for Schools", status:"Completed", img:"https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg", desc:"Clean water & sanitation in Langatta schools.", longDesc:"We installed water tanks, hygiene training, and reduced diseases by 70%.", mission:"Ensure every child has access to safe water and sanitation.", vision:"A Langatta free from waterborne illness.", team:["Grace A. (Lead)", "John M. (Engineer)", "Community Health Volunteers"], funders:["UNICEF","WaterAid","Local Donors"], gallery:["https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg","https://images.pexels.com/photos/2589244/pexels-photo-2589244.jpeg","https://images.pexels.com/photos/2913008/pexels-photo-2913008.jpeg"] },
     { id:2, name:"Digital Ambassadors Program", status:"Ongoing", img:"https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg", desc:"Coding & digital skills for youth.", longDesc:"412 trained, 189 gained remote work.", mission:"Bridge digital divide in Andolo.", vision:"Digital economy access for all.", team:["Jane N. (Tech Lead)","Peter O. (Mentor)","Google Trainers"], funders:["Google.org","GIZ","Andolo Youth Fund"], gallery:["https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg","https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg","https://images.pexels.com/photos/2589244/pexels-photo-2589244.jpeg"] },
-    { id:3, name:"Green Generation Reforestation", status:"Completed", img:"https://images.pexels.com/photos/2606897/pexels-photo-2606897.jpeg", desc:"Tree planting & climate action.", longDesc:"15,300 trees planted, 8 nurseries.", mission:"Restore 50 acres of degraded land.", vision:"A green, climate-resilient Langatta.", team:["Eunice K. (Coordinator)","Eco Rangers"], funders:["Green Belt Movement","UNDP"], gallery:["https://images.pexels.com/photos/2606897/pexels-photo-2606897.jpeg","https://images.pexels.com/photos/3693695/pexels-photo-3693695.jpeg"] },
+    { id:3, name:"Green Generation Reforestation", status:"Completed", img:"images/green/1.jpg", desc:"Tree planting & climate action.", longDesc:"15,300 trees planted, 8 nurseries.", mission:"Restore 50 acres of degraded land.", vision:"A green, climate-resilient Langatta.", team:["Eunice K. (Coordinator)","Eco Rangers"], funders:["Green Belt Movement","UNDP"], gallery:["images/green/1.jpg","images/green/2.jpg","images/green/3.jpeg","images/green/4.jpg","images/green/5.jpg","images/green/6.jpg","images/green/7.jpg","images/green/8.jpg"] },
     { id:4, name:"Youth Entrepreneurship Hub", status:"Ongoing", img:"https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg", desc:"Incubation & seed funding.", longDesc:"27 startups launched, KES 10M+ revenue.", mission:"Empower young entrepreneurs.", vision:"Thriving local economy.", team:["Brian O. (Business Coach)","Sharon W. (Finance)","Local Mentors"], funders:["Mastercard Foundation","Andolo SACCO"], gallery:["https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg","https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg"] },
-    { id:5, name:"Poultry Farming Co-op", status:"Upcoming", img:"https://images.pexels.com/photos/3713985/pexels-photo-3713985.jpeg", desc:"Modern poultry training for 200 youth.", longDesc:"Goal: 1.85M KES, sustainable income.", mission:"Nutrition & economic empowerment.", vision:"Self-sufficient farming communities.", team:["Dr. Kimani (Agronomist)","Co-op Leaders"], funders:["FAO","Langatta County"], gallery:["https://images.pexels.com/photos/3713985/pexels-photo-3713985.jpeg","https://images.pexels.com/photos/2589244/pexels-photo-2589244.jpeg"] },
+    { id:5, name:"Poultry Farming Co-op", status:"Upcoming", img:"images/farming/1.jpeg", desc:"Modern poultry training for 200 youth.", longDesc:"Goal: 1.85M KES, sustainable income.", mission:"Nutrition & economic empowerment.", vision:"Self-sufficient farming communities.", team:["Dr. Kimani (Agronomist)","Co-op Leaders"], funders:["FAO","Langatta County"], gallery:["images/farming/1.jpeg","images/farming/2.jpg","images/farming/3.png","images/farming/4.jpg","images/farming/5.jpg","images/farming/6.jpg","images/farming/7.jpg"] },
     { id:6, name:"Comprehensive Care Initiative", status:"Upcoming", img:"https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg", desc:"Mobile health clinic & mental wellness.", longDesc:"Serve 5,000+ residents.", mission:"Healthcare access for all.", vision:"Healthy communities.", team:["Dr. Lydia (Medical Lead)","Counsellors"], funders:["AMREF","WHO"], gallery:["https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg","https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg"] },
-    { id:7, name:"Sound Production Studio", status:"Upcoming", img:"https://images.pexels.com/photos/159370/recording-studio-microphone-sound-mixing-159370.jpeg", desc:"Music & podcasting hub.", longDesc:"Target: 1.2M KES, train 150 youth.", mission:"Creative expression & media skills.", vision:"Arts as economic driver.", team:["DJ Kevo (Producer)","Media Trainers"], funders:["Goethe Institute","Local Artists"], gallery:["https://images.pexels.com/photos/159370/recording-studio-microphone-sound-mixing-159370.jpeg","https://images.pexels.com/photos/2078969/pexels-photo-2078969.jpeg"] },
-    { id:8, name:"Recycling & Waste Management Website", status:"Upcoming", img:"https://images.pexels.com/photos/3693695/pexels-photo-3693695.jpeg", desc:"Digital platform for waste recycling.", longDesc:"Target: 2.95M KES, circular economy.", mission:"Zero plastic waste in Andolo.", vision:"Clean environment, green jobs.", team:["Tech for Good (Devs)","Youth Recyclers"], funders:["UNEP","NEMA"], gallery:["https://images.pexels.com/photos/3693695/pexels-photo-3693695.jpeg","https://images.pexels.com/photos/2606897/pexels-photo-2606897.jpeg"] },
+    { id:7, name:"Sound Production Studio", status:"Upcoming", img:"images/sound/1.jpg", desc:"Music & podcasting hub.", longDesc:"Target: 1.2M KES, train 150 youth.", mission:"Creative expression & media skills.", vision:"Arts as economic driver.", team:["DJ Kevo (Producer)","Media Trainers"], funders:["Goethe Institute","Local Artists"], gallery:["images/sound/1.jpg","images/sound/2.jpg","images/sound/3.jpg","images/sound/4.jpg","images/sound/5.jpg","images/sound/6.jpg","images/sound/7.web","images/sound/8.jpg"] },
+    { id:8, name:"Recycling & Waste Management Website", status:"Upcoming", img:"images/waste/1.web", desc:"Digital platform for waste recycling.", longDesc:"Target: 2.95M KES, circular economy.", mission:"Zero plastic waste in Andolo.", vision:"Clean environment, green jobs.", team:["Tech for Good (Devs)","Youth Recyclers"], funders:["UNEP","NEMA"], gallery:["images/waste/1.web","images/waste/2.jpg","images/waste/3.jpg","images/waste/4.jpg"] },
     { id:9, name:"Andolo Art Gallery Godown", status:"Upcoming", img:"https://images.pexels.com/photos/2078969/pexels-photo-2078969.jpeg", desc:"Convert warehouse into art gallery.", longDesc:"Target: 3.2M KES, cultural hub.", mission:"Celebrate Andolo's creativity.", vision:"Art as transformation.", team:["Curator Mary","Local Artists Collective"], funders:["Kenya Cultural Trust","Artists for Change"], gallery:["https://images.pexels.com/photos/2078969/pexels-photo-2078969.jpeg","https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg"] },
     { id:10, name:"Youth Roller-Skating Recreation", status:"Upcoming", img:"https://images.pexels.com/photos/3226465/pexels-photo-3226465.jpeg", desc:"Skating rink & leadership camps.", longDesc:"Target: 1.78M KES, promote unity.", mission:"Sports for youth development.", vision:"Active, engaged youth.", team:["Coach Ali","Recreation Leaders"], funders:["Sports Kenya","Local Business"], gallery:["https://images.pexels.com/photos/3226465/pexels-photo-3226465.jpeg","https://images.pexels.com/photos/2589244/pexels-photo-2589244.jpeg"] },
-    // NEW: Children's Home Project
     { id:11, name:"Langatta Children's Home & Hope Center", status:"Ongoing", img:"https://images.pexels.com/photos/6646837/pexels-photo-6646837.jpeg", desc:"Safe shelter, education & care for orphaned and vulnerable children.", longDesc:"Providing 50 children with housing, food, school fees, and psychosocial support. We aim to expand to 100 children.", mission:"Every child deserves love, safety, and opportunity.", vision:"A Langatta where no child grows up alone.", team:["Sarah Otieno (Director)","Child Psychologist","Volunteer Teachers"], funders:["Save the Children","Local Philanthropists","Andolo Community"], gallery:["https://images.pexels.com/photos/6646837/pexels-photo-6646837.jpeg","https://images.pexels.com/photos/1080199/pexels-photo-1080199.jpeg","https://images.pexels.com/photos/3482711/pexels-photo-3482711.jpeg"] }
   ];
 
@@ -210,7 +209,7 @@
     const galleryHtml = project.gallery ? `
       <h3>📸 Project Gallery</h3>
       <div class="gallery-grid">
-        ${project.gallery.map(url => `<img src="${url}" class="gallery-img" alt="gallery" loading="lazy">`).join('')}
+        ${project.gallery.map(url => `<img src="${url}" class="gallery-img" alt="gallery" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Image+Missing'">`).join('')}
       </div>
     ` : '<p>Gallery images coming soon.</p>';
 
@@ -234,7 +233,7 @@
     modalDynamic.innerHTML = `
       <h2 style="color:#0f2c2b;">${project.name}</h2>
       <p><strong>Status:</strong> ${project.status} | <strong>Location:</strong> Langatta, Andolo</p>
-      <img src="${project.img}" style="width:100%; max-height:350px; object-fit:cover; border-radius:28px; margin:1rem 0;">
+      <img src="${project.img}" style="width:100%; max-height:350px; object-fit:cover; border-radius:28px; margin:1rem 0;" onerror="this.src='https://via.placeholder.com/800x400?text=Project+Image'">
       <p>${project.longDesc || project.desc}</p>
       ${missionVision}
       ${teamHtml}
@@ -284,7 +283,6 @@
           } else {
             successDiv.innerHTML = `🏦 <strong>Bank Transfer Recorded</strong><br>${donorName}, KES ${amount.toLocaleString()} transferred to Co-op Bank A/C 1350368245.<br>Reference: ${txRef}. Funds will be allocated to ${project.name}. Thank you!`;
           }
-          // reset form
           document.getElementById('donorName').value = '';
           document.getElementById('donationAmount').value = '';
           setTimeout(() => successDiv.style.display = 'none', 8000);
