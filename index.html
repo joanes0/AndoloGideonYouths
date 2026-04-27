@@ -58,8 +58,9 @@
     .payment-method { display: flex; gap: 1.5rem; margin: 1rem 0; }
     .payment-method label { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; }
     .payment-input { padding: 0.7rem; border-radius: 60px; border: 1px solid #ddd0bf; width: 100%; margin: 0.5rem 0; }
-    .donate-modal-btn { background: #2c5a4f; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 60px; font-weight: 700; cursor: pointer; width: 100%; }
-    .donate-modal-btn:hover { background: #1e4038; }
+    .donate-modal-btn { background: #2c5a4f; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 60px; font-weight: 700; cursor: pointer; width: 100%; transition: 0.2s; }
+    .donate-modal-btn:disabled { background: #95a5a6; cursor: not-allowed; transform: none; }
+    .donate-modal-btn:hover:not(:disabled) { background: #1e4038; }
     .modal-success { margin-top: 1rem; background: #e1f3e8; padding: 0.6rem; border-radius: 60px; text-align: center; display: none; }
     hr { margin: 1rem 0; border-color: #e9e2d4; }
     footer { background: #0f2c2b; color: #cbd5d0; text-align: center; padding: 1.8rem; }
@@ -80,12 +81,12 @@
   </div>
 </header>
 
-<!-- Hero Carousel -->
+<!-- Hero Carousel (fixed image URLs with proper encoding) -->
 <section class="hero" id="home">
   <div class="hero-slides" id="heroCarousel">
-    <div class="hero-slide" style="background-image: url('images/pic 2.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/pic%202.jpg');"></div>
     <div class="hero-slide" style="background-image: url('images/water2.jpg');"></div>
-    <div class="hero-slide" style="background-image: url('images/images (2).jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/images%20(2).jpg');"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
@@ -108,8 +109,8 @@
     <h2 class="section-title">Who We Are</h2>
     <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">Andolo Gideon Youths is a grassroots movement born in Langatta, Andolo. We unlock potential through skill-building, environmental action, and community-led solutions.</p>
     <div class="vision-mission">
-      <div class="vm-card"><img src="images/water.jpeg" alt="Vision"><h3>🌟 Our Vision</h3><p>A self-reliant generation of young leaders transforming Langatta, Andolo and beyond.</p></div>
-      <div class="vm-card"><img src="images/farming.jpg" alt="Mission"><h3>🎯 Our Mission</h3><p>Mobilize resources, mentorship, and tools to equip youths with entrepreneurial skills.</p></div>
+      <div class="vm-card"><img src="images/water.jpeg" alt="Vision" loading="lazy"><h3>🌟 Our Vision</h3><p>A self-reliant generation of young leaders transforming Langatta, Andolo and beyond.</p></div>
+      <div class="vm-card"><img src="images/farming.jpg" alt="Mission" loading="lazy"><h3>🎯 Our Mission</h3><p>Mobilize resources, mentorship, and tools to equip youths with entrepreneurial skills.</p></div>
     </div>
   </div>
 </section>
@@ -128,7 +129,7 @@
     <h2 class="section-title">🤝 Support Our Work</h2>
     <p>Click any project card to see full details, gallery, team, funders and make a <strong>real-time M-PESA or Bank transfer</strong> (simulated but fully functional with validation). Your donations directly impact Langatta & Andolo.</p>
     <div style="background: #fef0e2; border-radius: 28px; padding: 1.5rem; margin-top: 1rem;">
-      <i class="fas fa-university"></i> <strong>Official Bank Account:</strong> Co-operative Bank | A/C Name: Andolo Gideon Youths | <strong>A/C Number: 1350368245</strong><br>
+      <i class="fas fa-university"></i> <strong>Official Bank Account:</strong> KCB Bank | A/C Name: Andolo Gideon Youths | <strong>A/C Number: 1350368245</strong><br>
       <i class="fas fa-mobile-alt"></i> <strong>M-PESA Till:</strong> 432156 (Account: ANDOLO) | Paybill: 432156
     </div>
   </div>
@@ -139,12 +140,12 @@
   <div class="container">
     <h2 class="section-title">📬 Connect With Us</h2>
     <div class="contact-flex" style="display: flex; gap:2rem; flex-wrap:wrap; background:#f3f0ea; border-radius:32px; padding:2rem;">
-      <div><p><i class="fas fa-envelope"></i> hello@andologideonyouths.org</p><p><i class="fas fa-phone"></i> +254 712 345 678</p><p><i class="fas fa-map-marker-alt"></i> Langatta, Andolo, Kenya</p><div class="social-icons"><a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-instagram"></i></a></div></div>
+      <div><p><i class="fas fa-envelope"></i> hello@andologideonyouths.org</p><p><i class="fas fa-phone"></i> AGY Hotline: +2540140953226</p><p><i class="fas fa-map-marker-alt"></i> Langatta, Andolo, Kenya</p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a> <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
       <div style="flex:1"><button class="btn" onclick="alert('📧 hello@andologideonyouths.org or visit our Langatta hub!')">Send Inquiry</button></div>
     </div>
   </div>
 </section>
-<footer><div class="container">© 2025 Andolo Gideon Youths — rooted in Langatta, Andolo | Bank A/C: 1350368245</div></footer>
+<footer><div class="container">© 2025 Andolo Gideon Youths — rooted in Langatta, Andolo | KCB Bank A/C: 1350368245</div></footer>
 
 <!-- Modal (Dedicated Project Page) -->
 <div id="projectModal" class="modal-overlay">
@@ -158,9 +159,16 @@
   // HERO CAROUSEL
   const slides = document.querySelectorAll('.hero-slide');
   let currentSlide = 0;
-  if (slides.length) { slides[0].classList.add('active'); setInterval(() => { slides.forEach(s => s.classList.remove('active')); currentSlide = (currentSlide+1)%slides.length; slides[currentSlide].classList.add('active'); }, 5000); }
+  if (slides.length) { 
+    slides[0].classList.add('active'); 
+    setInterval(() => { 
+      slides.forEach(s => s.classList.remove('active')); 
+      currentSlide = (currentSlide+1) % slides.length; 
+      slides[currentSlide].classList.add('active'); 
+    }, 5000); 
+  }
 
-  // ---------- PROJECTS DATA WITH UPDATED LOCAL IMAGES ----------
+  // ---------- PROJECTS DATA (unchanged content, added fallback safety) ----------
   const projects = [
     { id:1, name:"WASH for Schools", status:"Completed", img:"https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg", desc:"Clean water & sanitation in Langatta schools.", longDesc:"We installed water tanks, hygiene training, and reduced diseases by 70%.", mission:"Ensure every child has access to safe water and sanitation.", vision:"A Langatta free from waterborne illness.", team:["Grace A. (Lead)", "John M. (Engineer)", "Community Health Volunteers"], funders:["UNICEF","WaterAid","Local Donors"], gallery:["https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg","https://images.pexels.com/photos/2589244/pexels-photo-2589244.jpeg","https://images.pexels.com/photos/2913008/pexels-photo-2913008.jpeg"] },
     { id:2, name:"Digital Ambassadors Program", status:"Ongoing", img:"https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg", desc:"Coding & digital skills for youth.", longDesc:"412 trained, 189 gained remote work.", mission:"Bridge digital divide in Andolo.", vision:"Digital economy access for all.", team:["Jane N. (Tech Lead)","Peter O. (Mentor)","Google Trainers"], funders:["Google.org","GIZ","Andolo Youth Fund"], gallery:["https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg","https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg","https://images.pexels.com/photos/2589244/pexels-photo-2589244.jpeg"] },
@@ -175,6 +183,9 @@
     { id:11, name:"Langatta Children's Home & Hope Center", status:"Ongoing", img:"https://images.pexels.com/photos/6646837/pexels-photo-6646837.jpeg", desc:"Safe shelter, education & care for orphaned and vulnerable children.", longDesc:"Providing 50 children with housing, food, school fees, and psychosocial support. We aim to expand to 100 children.", mission:"Every child deserves love, safety, and opportunity.", vision:"A Langatta where no child grows up alone.", team:["Sarah Otieno (Director)","Child Psychologist","Volunteer Teachers"], funders:["Save the Children","Local Philanthropists","Andolo Community"], gallery:["https://images.pexels.com/photos/6646837/pexels-photo-6646837.jpeg","https://images.pexels.com/photos/1080199/pexels-photo-1080199.jpeg","https://images.pexels.com/photos/3482711/pexels-photo-3482711.jpeg"] }
   ];
 
+  // Helper to safely get array or empty array
+  function safeArray(arr) { return Array.isArray(arr) ? arr : []; }
+
   // Render project cards
   function renderProjectCards() {
     const grid = document.getElementById('projects-grid');
@@ -185,7 +196,7 @@
       const card = document.createElement('div');
       card.className = 'project-card';
       card.innerHTML = `
-        <img class="project-img" src="${proj.img}" alt="${proj.name}" loading="lazy">
+        <img class="project-img" src="${proj.img}" alt="${proj.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Image+Unavailable'">
         <div class="project-content">
           <span class="project-status ${statusClass}">${proj.status}</span>
           <h3>${proj.name}</h3>
@@ -199,50 +210,53 @@
     });
   }
 
-  // Open modal with dedicated project page (includes gallery, team, funders, mission/vision, real-time payments)
+  // Open modal with dedicated project page
   function openProjectModal(project) {
     const modal = document.getElementById('projectModal');
     const modalDynamic = document.getElementById('modalDynamic');
     if(!modalDynamic) return;
 
-    // Build gallery HTML
-    const galleryHtml = project.gallery ? `
+    const gallery = safeArray(project.gallery);
+    const team = safeArray(project.team);
+    const funders = safeArray(project.funders);
+
+    const galleryHtml = gallery.length ? `
       <h3>📸 Project Gallery</h3>
       <div class="gallery-grid">
-        ${project.gallery.map(url => `<img src="${url}" class="gallery-img" alt="gallery" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Image+Missing'">`).join('')}
+        ${gallery.map(url => `<img src="${url}" class="gallery-img" alt="Project image" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Image+Missing'">`).join('')}
       </div>
     ` : '<p>Gallery images coming soon.</p>';
 
-    const teamHtml = project.team ? `
+    const teamHtml = team.length ? `
       <h3>👥 Team Working on This Project</h3>
-      <div class="team-flex">${project.team.map(name => `<div class="team-card"><i class="fas fa-user"></i> ${name}</div>`).join('')}</div>
+      <div class="team-flex">${team.map(name => `<div class="team-card"><i class="fas fa-user"></i> ${escapeHtml(name)}</div>`).join('')}</div>
     ` : '';
 
-    const fundersHtml = project.funders ? `
+    const fundersHtml = funders.length ? `
       <h3>🤝 Funders & Partners</h3>
-      <div class="funder-flex">${project.funders.map(f => `<div class="funder-card"><i class="fas fa-handshake"></i> ${f}</div>`).join('')}</div>
+      <div class="funder-flex">${funders.map(f => `<div class="funder-card"><i class="fas fa-handshake"></i> ${escapeHtml(f)}</div>`).join('')}</div>
     ` : '';
 
     const missionVision = `
       <div style="background:#f9f4ea; border-radius:28px; padding:1rem; margin:1rem 0;">
-        <p><strong>🌟 Mission:</strong> ${project.mission || 'Empower youth and community in Langatta, Andolo.'}</p>
-        <p><strong>🎯 Vision:</strong> ${project.vision || 'Sustainable transformation for generations.'}</p>
+        <p><strong>🌟 Mission:</strong> ${escapeHtml(project.mission || 'Empower youth and community in Langatta, Andolo.')}</p>
+        <p><strong>🎯 Vision:</strong> ${escapeHtml(project.vision || 'Sustainable transformation for generations.')}</p>
       </div>
     `;
 
     modalDynamic.innerHTML = `
-      <h2 style="color:#0f2c2b;">${project.name}</h2>
-      <p><strong>Status:</strong> ${project.status} | <strong>Location:</strong> Langatta, Andolo</p>
+      <h2 style="color:#0f2c2b;">${escapeHtml(project.name)}</h2>
+      <p><strong>Status:</strong> ${escapeHtml(project.status)} | <strong>Location:</strong> Langatta, Andolo</p>
       <img src="${project.img}" style="width:100%; max-height:350px; object-fit:cover; border-radius:28px; margin:1rem 0;" onerror="this.src='https://via.placeholder.com/800x400?text=Project+Image'">
-      <p>${project.longDesc || project.desc}</p>
+      <p>${escapeHtml(project.longDesc || project.desc)}</p>
       ${missionVision}
       ${teamHtml}
       ${fundersHtml}
       ${galleryHtml}
       <hr>
       <div class="payment-section">
-        <h3><i class="fas fa-donate"></i> Support "${project.name}" — Real-Time M-PESA / Bank Transfer</h3>
-        <p><strong>Official Payment Details:</strong> M-PESA Till 432156 (Account: ANDOLO) | Bank: Co-op Bank A/C 1350368245</p>
+        <h3><i class="fas fa-donate"></i> Support "${escapeHtml(project.name)}" — Real-Time M-PESA / Bank Transfer</h3>
+        <p><strong>Official Payment Details:</strong> M-PESA Till 432156 (Account: ANDOLO) | Bank: KCB Bank A/C 1350368245</p>
         <form id="modalDonationForm">
           <input type="text" id="donorName" placeholder="Your full name" class="payment-input" required>
           <input type="number" id="donationAmount" placeholder="Amount (KES, min 50)" class="payment-input" min="50" required>
@@ -250,7 +264,7 @@
             <label><input type="radio" name="payMethod" value="mpesa" checked> <i class="fas fa-mobile-alt"></i> M-PESA</label>
             <label><input type="radio" name="payMethod" value="bank"> <i class="fas fa-university"></i> Bank Transfer</label>
           </div>
-          <button type="submit" class="donate-modal-btn"><i class="fas fa-heart"></i> Complete Donation (Real-Time)</button>
+          <button type="submit" class="donate-modal-btn" id="donateBtn"><i class="fas fa-heart"></i> Complete Donation (Real-Time)</button>
           <div id="modalDonationSuccess" class="modal-success"></div>
         </form>
         <p class="disclaimer" style="font-size:0.75rem; margin-top:0.5rem;"><i class="fas fa-info-circle"></i> This is a live simulation of M-PESA/Bank payment flow. In production, this would trigger STK Push or redirect to payment gateway. Demo records donation for transparency.</p>
@@ -260,11 +274,15 @@
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Attach payment handler
+    // Attach payment handler with double-submit prevention
     const form = document.getElementById('modalDonationForm');
-    if(form) {
+    const donateBtn = document.getElementById('donateBtn');
+    if(form && donateBtn) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
+        // Prevent multiple submissions
+        if (donateBtn.disabled) return;
+        
         const donorName = document.getElementById('donorName').value.trim();
         const amount = parseFloat(document.getElementById('donationAmount').value);
         const method = document.querySelector('input[name="payMethod"]:checked').value;
@@ -273,32 +291,50 @@
         if(!donorName) { alert("Please enter your name."); return; }
         if(isNaN(amount) || amount < 50) { alert("Minimum donation 50 KES."); return; }
 
+        donateBtn.disabled = true;
         successDiv.style.display = 'block';
         successDiv.innerHTML = `<i class="fas fa-spinner fa-pulse"></i> Processing ${method === 'mpesa' ? 'M-PESA STK Push' : 'Bank Transfer'}...`;
 
         setTimeout(() => {
           let txRef = method === 'mpesa' ? `MPESA${Math.floor(Math.random()*10000000)}` : `BANK${Date.now()}`;
           if(method === 'mpesa') {
-            successDiv.innerHTML = `✅ <strong>M-PESA Payment Initiated!</strong><br>${donorName}, KES ${amount.toLocaleString()} sent to Till 432156 (ANDOLO).<br>Transaction ID: ${txRef}. You'll receive SMS confirmation. Asante for supporting ${project.name}! 🎉`;
+            successDiv.innerHTML = `✅ <strong>M-PESA Payment Initiated!</strong><br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} sent to Till 432156 (ANDOLO).<br>Transaction ID: ${txRef}. You'll receive SMS confirmation. Asante for supporting ${escapeHtml(project.name)}! 🎉`;
           } else {
-            successDiv.innerHTML = `🏦 <strong>Bank Transfer Recorded</strong><br>${donorName}, KES ${amount.toLocaleString()} transferred to Co-op Bank A/C 1350368245.<br>Reference: ${txRef}. Funds will be allocated to ${project.name}. Thank you!`;
+            successDiv.innerHTML = `🏦 <strong>Bank Transfer Recorded</strong><br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} transferred to KCB Bank A/C 1350368245.<br>Reference: ${txRef}. Funds will be allocated to ${escapeHtml(project.name)}. Thank you!`;
           }
           document.getElementById('donorName').value = '';
           document.getElementById('donationAmount').value = '';
-          setTimeout(() => successDiv.style.display = 'none', 8000);
+          donateBtn.disabled = false;
+          setTimeout(() => { successDiv.style.display = 'none'; }, 8000);
         }, 1800);
       });
     }
   }
 
+  // Simple escape to prevent XSS (though content is trusted, good practice)
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>]/g, function(m) {
+      if (m === '&') return '&amp;';
+      if (m === '<') return '&lt;';
+      if (m === '>') return '&gt;';
+      return m;
+    }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+      return c;
+    });
+  }
+
   // Close modal
   const modalOverlay = document.getElementById('projectModal');
   const closeModalBtn = document.getElementById('closeModal');
-  function closeModal() { modalOverlay.classList.remove('active'); document.body.style.overflow = 'auto'; }
+  function closeModal() { 
+    modalOverlay.classList.remove('active'); 
+    document.body.style.overflow = 'auto'; 
+  }
   if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', (e) => { if(e.target === modalOverlay) closeModal(); });
 
-  // Animate stats
+  // Animate stats with IntersectionObserver
   function animateNumbers() {
     const statNumbers = document.querySelectorAll('.stat-number');
     const observer = new IntersectionObserver((entries) => {
@@ -308,7 +344,15 @@
           const target = parseInt(el.getAttribute('data-target'),10);
           let current = 0;
           const step = target/50;
-          const update = () => { current += step; if(current<target) { el.innerText = Math.floor(current); requestAnimationFrame(update); } else el.innerText = target; };
+          const update = () => { 
+            current += step; 
+            if(current < target) { 
+              el.innerText = Math.floor(current); 
+              requestAnimationFrame(update); 
+            } else { 
+              el.innerText = target; 
+            }
+          };
           update();
           observer.unobserve(el);
         }
