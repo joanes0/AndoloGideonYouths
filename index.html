@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* (your existing CSS – unchanged) */
+    /* (Your existing CSS – unchanged) */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #fefcf5; color: #1e2a2e; line-height: 1.5; scroll-behavior: smooth; }
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
@@ -288,6 +288,35 @@
 
     renderProjectCards();
     animateNumbers();
+
+    // ---------- DEEP-LINK SCRIPT (SEO) ----------
+    // Automatically open the correct project modal when a ?project=slug URL is used
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectSlug = urlParams.get('project');
+    if (projectSlug) {
+      const slugToId = {
+        'wash-for-schools': 1,
+        'digital-ambassadors': 2,
+        'green-generation': 3,
+        'youth-entrepreneurship-hub': 4,
+        'poultry-farming-coop': 5,
+        'comprehensive-care': 6,
+        'sound-production-studio': 7,
+        'recycling-waste-management': 8,
+        'andolo-art-gallery': 9,
+        'youth-roller-skating': 10,
+        'langata-childrens-home': 11,
+        'agy-feeding-program': 12
+      };
+      const projectId = slugToId[projectSlug];
+      if (projectId) {
+        // Wait a moment for the projects to load and the DOM to be ready
+        setTimeout(() => {
+          const project = projects.find(p => p.id === projectId);
+          if (project) openProjectModal(project);
+        }, 800);
+      }
+    }
   </script>
 </body>
 </html>
