@@ -24,7 +24,7 @@
     /* Hero Carousel */
     .hero { position: relative; color: white; padding: 5rem 0; text-align: center; overflow: hidden; background-color: #0a2a28; }
     .hero-slides { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-    .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s ease-in-out; }
+    .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s ease-in-out; will-change: opacity; backface-visibility: hidden; transform: translateZ(0); }
     .hero-slide.active { opacity: 1; }
     .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(15,44,43,0.8), rgba(0,0,0,0.55)); z-index: 1; }
     .hero-content { position: relative; z-index: 2; }
@@ -97,7 +97,7 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <h2>Empowering Langata & Andolo’s Future</h2>
+    <h2>Empowering Langata & Andolo's Future</h2>
     <p>We are Andolo Gideon Youths — turning dreams into action, one community at a time.</p>
   </div>
 </section>
@@ -163,6 +163,18 @@
 </div>
 
 <script>
+  // Preload hero carousel images (helps reduce flicker)
+  const heroImages = [
+    'images/pic%202.jpg',
+    'images/water2.jpg',
+    'images/images%20(2).jpg',
+    'images/water-1.jpg'
+  ];
+  heroImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
   // HERO CAROUSEL (with new image)
   const slides = document.querySelectorAll('.hero-slide');
   let currentSlide = 0;
@@ -241,7 +253,7 @@
       <strong>🎯 Problem:</strong> 1,200+ children face chronic hunger, affecting school attendance. Current self-funded operations reach only 800 daily meals.<br>
       <strong>✅ Objectives:</strong> Scale to 5,000 beneficiaries, establish a community kitchen, agricultural gardens, and nutrition training.<br>
       <strong>💰 Budget Ask:</strong> $85,000 (KES 11M) for 12 months: food supplies, kitchen infrastructure, monitoring & staffing.<br>
-      <strong>🤝 Why partner with UNICEF/WHO:</strong> Aligns with SDG 2 (Zero Hunger) and WHO’s nutrition targets. AGY has proven local trust and direct implementation capacity.<br>
+      <strong>🤝 Why partner with UNICEF/WHO:</strong> Aligns with SDG 2 (Zero Hunger) and WHO's nutrition targets. AGY has proven local trust and direct implementation capacity. <a href="https://www.un.org/sustainabledevelopment/wp-content/uploads/2023/09/Goal-4_Fast-Facts.pdf" target="_blank" rel="noopener noreferrer">📘 UN SDG Goal 4 Fast Facts (PDF)</a><br>
       <strong>📈 Impact projection:</strong> 70% reduction in childhood malnutrition, 95% school attendance improvement.<br>
       <i class="fas fa-hand-holding-heart"></i> We invite UNICEF, WHO, and individual well-wishers to co-fund this life-saving program. <strong>Contact us for a full proposal deck.</strong></div>`;
     }
