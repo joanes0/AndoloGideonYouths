@@ -57,7 +57,6 @@
     .modal-close:hover { background: #e67e22; color: white; }
     .modal-logo { text-align: center; margin-bottom: 1.5rem; }
     .modal-logo img { height: 55px; width: auto; }
-    /* Modern flex gallery */
     .flex-gallery { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; justify-content: center; }
     .gallery-item { flex: 1 1 200px; max-width: 250px; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.2s; background: #f3f0ea; }
     .gallery-item:hover { transform: scale(1.02); }
@@ -170,7 +169,8 @@
     let currentSlide = 0;
     if (slides.length) { slides[0].classList.add('active'); setInterval(() => { slides.forEach(s => s.classList.remove('active')); currentSlide = (currentSlide+1) % slides.length; slides[currentSlide].classList.add('active'); }, 5000); }
 
-    // Projects data (keeping local image paths where possible)
+    // Projects data - all thumbnails now use local images from their galleries
+    // For each project, the 'img' is the first image from its gallery (or a specific local path)
     const projects = [
       { id:1, name:"WASH for Schools", status:"Completed", img:"images/water.jpeg", desc:"Clean water & sanitation in Langata schools.", longDesc:"We installed water tanks, hygiene training, and reduced diseases by 70%.", mission:"Ensure every child has access to safe water and sanitation.", vision:"A Langata free from waterborne illness.", team:["Grace A. (Lead)", "John M. (Engineer)", "Community Health Volunteers"], funders:["UNICEF","WaterAid","Local Donors"], gallery:["images/water.jpeg","images/water2.jpg","images/water-1.jpg"] },
       { id:2, name:"Digital Ambassadors Program", status:"Ongoing", img:"images/digital.jpg", desc:"Coding & digital skills for youth.", longDesc:"412 trained, 189 gained remote work.", mission:"Bridge digital divide in Andolo.", vision:"Digital economy access for all.", team:["Jane N. (Tech Lead)","Peter O. (Mentor)","Google Trainers"], funders:["Google.org","GIZ","Andolo Youth Fund"], gallery:["images/digital.jpg"] },
@@ -179,11 +179,11 @@
       { id:5, name:"Poultry Farming Co-op", status:"Upcoming", img:"images/farming/1.jpeg", desc:"Modern poultry training for 200 youth.", longDesc:"Goal: 1.85M KES, sustainable income.", mission:"Nutrition & economic empowerment.", vision:"Self-sufficient farming communities.", team:["Dr. Kimani (Agronomist)","Co-op Leaders"], funders:["FAO","Langata County"], gallery:["images/farming/1.jpeg","images/farming/2.jpg","images/farming/3.png","images/farming/4.jpg","images/farming/5.jpg","images/farming/6.jpg","images/farming/7.jpg"] },
       { id:6, name:"Comprehensive Care Initiative", status:"Upcoming", img:"images/care.jpg", desc:"Mobile health clinic & mental wellness.", longDesc:"Serve 5,000+ residents.", mission:"Healthcare access for all.", vision:"Healthy communities.", team:["Dr. Lydia (Medical Lead)","Counsellors"], funders:["AMREF","WHO"], gallery:["images/care.jpg"] },
       { id:7, name:"Sound Production Studio", status:"Upcoming", img:"images/sound/1.jpg", desc:"Music & podcasting hub.", longDesc:"Target: 1.2M KES, train 150 youth.", mission:"Creative expression & media skills.", vision:"Arts as economic driver.", team:["DJ Kevo (Producer)","Media Trainers"], funders:["Goethe Institute","Local Artists"], gallery:["images/sound/1.jpg","images/sound/2.jpg","images/sound/3.jpg","images/sound/4.jpg","images/sound/5.jpg","images/sound/6.jpg","images/sound/7.web","images/sound/8.jpg"] },
-      { id:8, name:"Recycling & Waste Management Website", status:"Upcoming", img:"images/waste/1.web", desc:"Digital platform for waste recycling.", longDesc:"Target: 2.95M KES, circular economy.", mission:"Zero plastic waste in Andolo.", vision:"Clean environment, green jobs.", team:["Tech for Good (Devs)","Youth Recyclers"], funders:["UNEP","NEMA"], gallery:["images/waste/1.web","images/waste/2.jpg","images/waste/3.jpg","images/waste/4.jpg"] },
+      { id:8, name:"Recycling & Waste Management Website", status:"Upcoming", img:"images/waste/4.jpg", desc:"Digital platform for waste recycling.", longDesc:"Target: 2.95M KES, circular economy.", mission:"Zero plastic waste in Andolo.", vision:"Clean environment, green jobs.", team:["Tech for Good (Devs)","Youth Recyclers"], funders:["UNEP","NEMA"], gallery:["images/waste/4.jpg","images/waste/1.web","images/waste/2.jpg","images/waste/3.jpg"] },
       { id:9, name:"Andolo Art Gallery Godown", status:"Upcoming", img:"images/art.jpg", desc:"Convert warehouse into art gallery.", longDesc:"Target: 3.2M KES, cultural hub.", mission:"Celebrate Andolo's creativity.", vision:"Art as transformation.", team:["Curator Mary","Local Artists Collective"], funders:["Kenya Cultural Trust","Artists for Change"], gallery:["images/art.jpg"] },
       { id:10, name:"Youth Roller-Skating Recreation", status:"Upcoming", img:"images/skating.jpg", desc:"Skating rink & leadership camps.", longDesc:"Target: 1.78M KES, promote unity.", mission:"Sports for youth development.", vision:"Active, engaged youth.", team:["Coach Ali","Recreation Leaders"], funders:["Sports Kenya","Local Business"], gallery:["images/skating.jpg"] },
       { id:11, name:"Langata Children's Home & Hope Center", status:"Ongoing", img:"images/children.jpg", desc:"Safe shelter, education & care.", longDesc:"Providing 50 children with housing, food, school fees.", mission:"Every child deserves love, safety, and opportunity.", vision:"A Langata where no child grows up alone.", team:["Sarah Otieno (Director)","Child Psychologist"], funders:["Save the Children","Local Philanthropists"], gallery:["images/children.jpg"] },
-      // AGY Feeding Program with updated media gallery (modern flex)
+      // AGY Feeding Program with full media gallery
       { id:12, name:"AGY Feeding Program", status:"Seeking Partners", img:"images/feeding/013.jpg", desc:"School meals & community nutrition – launched May 23rd, self-funded but calling global partners.", longDesc:"Launched on 23rd May 2025, this program combats chronic hunger in Langata & Andolo, providing daily nutritious meals to 800+ children and vulnerable households. Currently self-funded by AGY members, we urgently need institutional partners like UNICEF, WHO, and well-wishers to scale to 5,000 beneficiaries.", mission:"Zero hunger in Langata by 2027 through sustainable feeding and local food systems.", vision:"A nourished generation ready to learn, lead, and thrive.", team:["Gideon Andolo (Coordinator)","Chef Mary (Nutritionist)","Community Volunteers"], funders:["Self-funded (May 2025 launch)","UNICEF (target)","WHO (target)","Well-wishers needed"], 
         media: [
           { type: "image", src: "images/feeding/013.jpg", caption: "Feeding program launch" },
@@ -224,7 +224,7 @@
       const modalDynamic = document.getElementById('modalDynamic');
       if(!modalDynamic) return;
 
-      // Build gallery HTML (modern flex gallery)
+      // Build gallery HTML (flex gallery)
       let galleryHtml = '';
       if (project.media && project.media.length) {
         galleryHtml = `<h3>📸 Media Gallery (Images & Videos)</h3><div class="flex-gallery">`;
@@ -237,7 +237,6 @@
         });
         galleryHtml += `</div>`;
       } else {
-        // Fallback to old gallery array if exists
         const gallery = safeArray(project.gallery);
         if (gallery.length) {
           galleryHtml = `<h3>📸 Project Gallery</h3><div class="flex-gallery">${gallery.map(url => `<div class="gallery-item"><img src="${url}" loading="lazy" onerror="this.src='https://placehold.co/250x180?text=Image+Missing'"></div>`).join('')}</div>`;
@@ -365,7 +364,7 @@
     renderProjectCards();
     animateNumbers();
 
-    // Deep‑link support
+    // Deep-link support
     const urlParams = new URLSearchParams(window.location.search);
     const projectSlug = urlParams.get('project');
     if (projectSlug) {
