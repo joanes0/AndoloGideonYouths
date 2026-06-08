@@ -3,16 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Andolo Gideon Youths | Langata Rising – Empower Andolo</title>
   
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="mfvKBDO9veUxAWZcC0KoUmSFTKGUSq3pSDrRq-Iu8sY" />
+  <title>Andolo Gideon Youths | Langata Rising – Empower Andolo, Kenya</title>
   
-  <!-- Favicon -->
+  <meta name="description" content="Andolo Gideon Youths (AGY) empowers youth in Langata, Andolo through clean water, digital skills, feeding programs, and community projects. Donate via M-PESA Till 4052649 or Paybill 4052573.">
+  <link rel="canonical" href="https://andologideonyouths.org/">
+  <meta name="robots" content="index, follow">
+  
+  <meta name="google-site-verification" content="mfvKBDO9veUxAWZcC0KoUmSFTKGUSq3pSDrRq-Iu8sY">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-539261YBPF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-539261YBPF');
+  </script>
+  
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="shortcut icon" href="images/logo.png">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Andolo Gideon Youths – Empowering Langata & Andolo">
+  <meta property="og:description" content="Support youth-led projects: clean water, digital skills, feeding program, and more. Donate via M-PESA Till 4052649.">
+  <meta property="og:image" content="https://andologideonyouths.org/images/logo.png">
+  <meta property="og:url" content="https://andologideonyouths.org/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Andolo Gideon Youths – Empowering Langata & Andolo">
+  <meta name="twitter:description" content="Youth-led community projects in Kenya. Donate to support feeding, education, and environment.">
+  <meta name="twitter:image" content="https://andologideonyouths.org/images/logo.png">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #fefcf5; color: #1e2a2e; line-height: 1.5; scroll-behavior: smooth; }
@@ -50,6 +75,12 @@
     .project-status { display: inline-block; background: #fef2e6; color: #b45f1b; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.8rem; border-radius: 40px; margin-bottom: 1rem; }
     .project-status.completed { background: #e0f2e9; color: #1f6e43; }
     .project-status.partners { background: #e6f0fa; color: #1f6392; }
+    .pdf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .pdf-card { background: white; border-radius: 24px; border: 1px solid #efe6da; padding: 1.5rem; transition: 0.2s; display: flex; align-items: center; gap: 1rem; text-decoration: none; color: #1e2a2e; }
+    .pdf-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); background: #fefcf5; }
+    .pdf-icon { font-size: 2.5rem; color: #e67e22; }
+    .pdf-info h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+    .pdf-info p { font-size: 0.8rem; color: #5f6c6e; }
     .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 1000; display: flex; align-items: center; justify-content: center; visibility: hidden; opacity: 0; transition: 0.3s; overflow-y: auto; }
     .modal-overlay.active { visibility: visible; opacity: 1; }
     .modal-container { background: #fffef7; max-width: 1100px; width: 90%; max-height: 90vh; border-radius: 32px; overflow-y: auto; padding: 2rem; position: relative; margin: 2rem auto; box-shadow: 0 30px 50px rgba(0,0,0,0.3); }
@@ -75,321 +106,348 @@
     hr { margin: 1rem 0; border-color: #e9e2d4; }
     .proposal-box { background: #eef3fc; border-left: 5px solid #e67e22; padding: 1.5rem; border-radius: 24px; margin: 1rem 0; }
     footer { background: #0f2c2b; color: #cbd5d0; text-align: center; padding: 1.8rem; }
-    @media (max-width: 640px) { .modal-container { padding: 1rem; } .gallery-item { flex-basis: 140px; } }
+    @media (max-width: 640px) { .modal-container { padding: 1rem; } .gallery-item { flex-basis: 140px; } .pdf-grid { grid-template-columns: 1fr; } }
   </style>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-539261YBPF');
-    </script>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav-container">
-      <div class="logo"><img src="images/logo.png" alt="AGY Logo" onerror="this.src='https://placehold.co/200x70?text=AGY'"></div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#get-involved">Get Involved</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </header>
 
-  <section class="hero" id="home">
-    <div class="hero-slides" id="heroCarousel">
-      <div class="hero-slide" style="background-image: url('images/pic%202.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('images/water2.jpg');"></div>
-      <div class="hero-slide" style="background-image: url('images/images%20(2).jpg');"></div>
-      <div class="hero-slide" style="background-image: url('images/water-1.jpg');"></div>
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h2>Empowering Langata & Andolo's Future</h2>
-      <p>We are Andolo Gideon Youths — turning dreams into action, one community at a time.</p>
-    </div>
-  </section>
+<header class="header">
+  <div class="container nav-container">
+    <div class="logo"><img src="images/logo.png" alt="AGY Logo" onerror="this.src='https://placehold.co/200x70?text=AGY'"></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#proposals">Proposals</a></li>
+      <li><a href="#get-involved">Get Involved</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">Who We Are</h2>
-      <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">Andolo Gideon Youths is a grassroots movement born in Langata, Andolo. We unlock potential through skill-building, environmental action, and community-led solutions.</p>
-      <div class="vision-mission">
-        <div class="vm-card"><img src="images/water.jpeg" alt="Vision" loading="lazy"><h3>🌟 Our Vision</h3><p>A self-reliant generation of young leaders transforming Langata, Andolo and beyond.</p></div>
-        <div class="vm-card"><img src="images/farming.jpg" alt="Mission" loading="lazy"><h3>🎯 Our Mission</h3><p>Mobilize resources, mentorship, and tools to equip youths with entrepreneurial skills.</p></div>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="home">
+  <div class="hero-slides" id="heroCarousel">
+    <div class="hero-slide" style="background-image: url('images/pic%202.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/water2.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/images%20(2).jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/water-1.jpg');"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h2>Empowering Langata & Andolo's Future</h2>
+    <p>We are Andolo Gideon Youths — turning dreams into action, one community at a time.</p>
+  </div>
+</section>
 
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">📌 Our Impact Projects (Click for dedicated page)</h2>
-      <div class="stats-wrapper">
-        <div class="stat-card"><div class="stat-number" data-target="15">0</div><div>Active Communities</div></div>
-        <div class="stat-card"><div class="stat-number" data-target="9120">0</div><div>Youth Empowered</div></div>
-        <div class="stat-card"><div class="stat-number" data-target="29">0</div><div>Impact Projects</div></div>
-        <div class="stat-card"><div class="stat-number" data-target="96">0</div><div>Local Satisfaction %</div></div>
-      </div>
-      <div id="projects-grid" class="projects-grid"></div>
-    </div>
-  </section>
-
-  <section id="get-involved">
-    <div class="container">
-      <h2 class="section-title">🤝 Support Our Work</h2>
-      <p>Click any project card to see full details, gallery, team, funders and make a <strong>real-time contribution via M-PESA or Bank</strong>. Your donations directly impact Langata & Andolo.</p>
-      <div style="background: #fef0e2; border-radius: 28px; padding: 1.5rem; margin-top: 1rem;">
-        <i class="fas fa-university"></i> <strong>Official Bank Account:</strong> KCB Bank | A/C Name: Andolo Gideon Youths | <strong>A/C Number: 1350368245</strong><br>
-        <i class="fas fa-mobile-alt"></i> <strong>M-PESA Options:</strong> Buy Goods Till <strong>4052649</strong> | Paybill <strong>4052573</strong> (Account: <strong>Andolo Gideon Youths AGY</strong>)<br>
-        <i class="fas fa-hand-holding-usd"></i> Use these details when donating via project modal.
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">📬 Connect With Us</h2>
-      <div class="contact-flex" style="display: flex; gap:2rem; flex-wrap:wrap; background:#f3f0ea; border-radius:32px; padding:2rem;">
-        <div><p><i class="fas fa-envelope"></i> hello@andologideonyouths.org</p><p><i class="fas fa-phone"></i> AGY Hotline: +2540140953226</p><p><i class="fas fa-map-marker-alt"></i> Langata, Andolo, Kenya</p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a> <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
-        <div style="flex:1"><button class="btn" onclick="alert('📧 hello@andologideonyouths.org or visit our Langata hub!')">Send Inquiry</button></div>
-      </div>
-    </div>
-  </section>
-  <footer><div class="container">© 2025 Andolo Gideon Youths — rooted in Langata, Andolo | KCB Bank A/C: 1350368245 | M-PESA Till: 4052649 / Paybill: 4052573 (AGY)</div></footer>
-
-  <div id="projectModal" class="modal-overlay">
-    <div class="modal-container" id="modalContent">
-      <span class="modal-close" id="closeModal">&times;</span>
-      <div id="modalDynamic"></div>
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">Who We Are</h2>
+    <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">Andolo Gideon Youths is a grassroots movement born in Langata, Andolo. We unlock potential through skill-building, environmental action, and community-led solutions.</p>
+    <div class="vision-mission">
+      <div class="vm-card"><img src="images/water.jpeg" alt="Vision" loading="lazy"><h3>🌟 Our Vision</h3><p>A self-reliant generation of young leaders transforming Langata, Andolo and beyond.</p></div>
+      <div class="vm-card"><img src="images/farming.jpg" alt="Mission" loading="lazy"><h3>🎯 Our Mission</h3><p>Mobilize resources, mentorship, and tools to equip youths with entrepreneurial skills.</p></div>
     </div>
   </div>
+</section>
 
-  <script>
-    // Preload hero images
-    const heroImages = ['images/pic%202.jpg','images/water2.jpg','images/images%20(2).jpg','images/water-1.jpg'];
-    heroImages.forEach(src => { const img = new Image(); img.src = src; });
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">📌 Our Impact Projects (Click for dedicated page)</h2>
+    <div class="stats-wrapper">
+      <div class="stat-card"><div class="stat-number" data-target="15">0</div><div>Active Communities</div></div>
+      <div class="stat-card"><div class="stat-number" data-target="9120">0</div><div>Youth Empowered</div></div>
+      <div class="stat-card"><div class="stat-number" data-target="29">0</div><div>Impact Projects</div></div>
+      <div class="stat-card"><div class="stat-number" data-target="96">0</div><div>Local Satisfaction %</div></div>
+    </div>
+    <div id="projects-grid" class="projects-grid"></div>
+  </div>
+</section>
 
-    // Hero carousel
-    const slides = document.querySelectorAll('.hero-slide');
-    let currentSlide = 0;
-    if (slides.length) { slides[0].classList.add('active'); setInterval(() => { slides.forEach(s => s.classList.remove('active')); currentSlide = (currentSlide+1) % slides.length; slides[currentSlide].classList.add('active'); }, 5000); }
+<section id="proposals">
+  <div class="container">
+    <h2 class="section-title">📄 Funding Proposals & Reports</h2>
+    <p style="margin-bottom: 1.5rem;">Download detailed project proposals, budgets, and impact reports. All documents are in PDF format.</p>
+    <div class="pdf-grid" id="pdfGrid"></div>
+  </div>
+</section>
 
-    // Projects data - all thumbnails now use local images from their galleries
-    // For each project, the 'img' is the first image from its gallery (or a specific local path)
-    const projects = [
-      { id:1, name:"WASH for Schools", status:"Completed", img:"images/water.jpeg", desc:"Clean water & sanitation in Langata schools.", longDesc:"We installed water tanks, hygiene training, and reduced diseases by 70%.", mission:"Ensure every child has access to safe water and sanitation.", vision:"A Langata free from waterborne illness.", team:["Grace A. (Lead)", "John M. (Engineer)", "Community Health Volunteers"], funders:["UNICEF","WaterAid","Local Donors"], gallery:["images/water.jpeg","images/water2.jpg","images/water-1.jpg"] },
-      { id:2, name:"Digital Ambassadors Program", status:"Ongoing", img:"images/digital.jpg", desc:"Coding & digital skills for youth.", longDesc:"412 trained, 189 gained remote work.", mission:"Bridge digital divide in Andolo.", vision:"Digital economy access for all.", team:["Jane N. (Tech Lead)","Peter O. (Mentor)","Google Trainers"], funders:["Google.org","GIZ","Andolo Youth Fund"], gallery:["images/digital.jpg"] },
-      { id:3, name:"Green Generation Reforestation", status:"Completed", img:"images/green/1.jpg", desc:"Tree planting & climate action.", longDesc:"15,300 trees planted, 8 nurseries.", mission:"Restore 50 acres of degraded land.", vision:"A green, climate-resilient Langata.", team:["Eunice K. (Coordinator)","Eco Rangers"], funders:["Green Belt Movement","UNDP"], gallery:["images/green/1.jpg","images/green/2.jpg","images/green/3.jpeg","images/green/4.jpg","images/green/5.jpg","images/green/6.jpg","images/green/7.jpg","images/green/8.jpg"] },
-      { id:4, name:"Youth Entrepreneurship Hub", status:"Ongoing", img:"images/entrepreneurship.jpg", desc:"Incubation & seed funding.", longDesc:"27 startups launched, KES 10M+ revenue.", mission:"Empower young entrepreneurs.", vision:"Thriving local economy.", team:["Brian O. (Business Coach)","Sharon W. (Finance)","Local Mentors"], funders:["Mastercard Foundation","Andolo SACCO"], gallery:["images/entrepreneurship.jpg"] },
-      { id:5, name:"Poultry Farming Co-op", status:"Upcoming", img:"images/farming/1.jpeg", desc:"Modern poultry training for 200 youth.", longDesc:"Goal: 1.85M KES, sustainable income.", mission:"Nutrition & economic empowerment.", vision:"Self-sufficient farming communities.", team:["Dr. Kimani (Agronomist)","Co-op Leaders"], funders:["FAO","Langata County"], gallery:["images/farming/1.jpeg","images/farming/2.jpg","images/farming/3.png","images/farming/4.jpg","images/farming/5.jpg","images/farming/6.jpg","images/farming/7.jpg"] },
-      { id:6, name:"Comprehensive Care Initiative", status:"Upcoming", img:"images/care.jpg", desc:"Mobile health clinic & mental wellness.", longDesc:"Serve 5,000+ residents.", mission:"Healthcare access for all.", vision:"Healthy communities.", team:["Dr. Lydia (Medical Lead)","Counsellors"], funders:["AMREF","WHO"], gallery:["images/care.jpg"] },
-      { id:7, name:"Sound Production Studio", status:"Upcoming", img:"images/sound/1.jpg", desc:"Music & podcasting hub.", longDesc:"Target: 1.2M KES, train 150 youth.", mission:"Creative expression & media skills.", vision:"Arts as economic driver.", team:["DJ Kevo (Producer)","Media Trainers"], funders:["Goethe Institute","Local Artists"], gallery:["images/sound/1.jpg","images/sound/2.jpg","images/sound/3.jpg","images/sound/4.jpg","images/sound/5.jpg","images/sound/6.jpg","images/sound/7.web","images/sound/8.jpg"] },
-      { id:8, name:"Recycling & Waste Management Website", status:"Upcoming", img:"images/waste/4.jpg", desc:"Digital platform for waste recycling.", longDesc:"Target: 2.95M KES, circular economy.", mission:"Zero plastic waste in Andolo.", vision:"Clean environment, green jobs.", team:["Tech for Good (Devs)","Youth Recyclers"], funders:["UNEP","NEMA"], gallery:["images/waste/4.jpg","images/waste/1.web","images/waste/2.jpg","images/waste/3.jpg"] },
-      { id:9, name:"Andolo Art Gallery Godown", status:"Upcoming", img:"images/art.jpg", desc:"Convert warehouse into art gallery.", longDesc:"Target: 3.2M KES, cultural hub.", mission:"Celebrate Andolo's creativity.", vision:"Art as transformation.", team:["Curator Mary","Local Artists Collective"], funders:["Kenya Cultural Trust","Artists for Change"], gallery:["images/art.jpg"] },
-      { id:10, name:"Youth Roller-Skating Recreation", status:"Upcoming", img:"images/skating.jpg", desc:"Skating rink & leadership camps.", longDesc:"Target: 1.78M KES, promote unity.", mission:"Sports for youth development.", vision:"Active, engaged youth.", team:["Coach Ali","Recreation Leaders"], funders:["Sports Kenya","Local Business"], gallery:["images/skating.jpg"] },
-      { id:11, name:"Langata Children's Home & Hope Center", status:"Ongoing", img:"images/children.jpg", desc:"Safe shelter, education & care.", longDesc:"Providing 50 children with housing, food, school fees.", mission:"Every child deserves love, safety, and opportunity.", vision:"A Langata where no child grows up alone.", team:["Sarah Otieno (Director)","Child Psychologist"], funders:["Save the Children","Local Philanthropists"], gallery:["images/children.jpg"] },
-      // AGY Feeding Program with full media gallery
-      { id:12, name:"AGY Feeding Program", status:"Seeking Partners", img:"images/feeding/013.jpg", desc:"School meals & community nutrition – launched May 23rd, self-funded but calling global partners.", longDesc:"Launched on 23rd May 2025, this program combats chronic hunger in Langata & Andolo, providing daily nutritious meals to 800+ children and vulnerable households. Currently self-funded by AGY members, we urgently need institutional partners like UNICEF, WHO, and well-wishers to scale to 5,000 beneficiaries.", mission:"Zero hunger in Langata by 2027 through sustainable feeding and local food systems.", vision:"A nourished generation ready to learn, lead, and thrive.", team:["Gideon Andolo (Coordinator)","Chef Mary (Nutritionist)","Community Volunteers"], funders:["Self-funded (May 2025 launch)","UNICEF (target)","WHO (target)","Well-wishers needed"], 
-        media: [
-          { type: "image", src: "images/feeding/013.jpg", caption: "Feeding program launch" },
-          { type: "image", src: "images/feeding/014.jpg", caption: "Community kitchen" },
-          { type: "image", src: "images/feeding/016.jpg", caption: "Children receiving meals" },
-          { type: "image", src: "images/feeding/018.jpg", caption: "Nutritious food" },
-          { type: "image", src: "images/feeding/023.jpg", caption: "Volunteers at work" },
-          { type: "image", src: "images/feeding/01.jpg", caption: "Food distribution" },
-          { type: "image", src: "images/feeding/05.jpg", caption: "Happy beneficiaries" },
-          { type: "video", src: "images/feeding/007.mp4", caption: "Meal preparation", poster: "images/feeding/013.jpg" },
-          { type: "video", src: "images/feeding/009.mp4", caption: "Community impact", poster: "images/feeding/013.jpg" },
-          { type: "video", src: "images/feeding/002.mp4", caption: "Daily feeding", poster: "images/feeding/013.jpg" }
-        ]
-      }
-    ];
+<section id="get-involved">
+  <div class="container">
+    <h2 class="section-title">🤝 Support Our Work</h2>
+    <p>Click any project card to see full details, gallery, team, funders and make a <strong>real-time contribution via M-PESA or Bank</strong>. Your donations directly impact Langata & Andolo.</p>
+    <div style="background: #fef0e2; border-radius: 28px; padding: 1.5rem; margin-top: 1rem;">
+      <i class="fas fa-university"></i> <strong>Official Bank Account:</strong> KCB Bank | A/C Name: Andolo Gideon Youths | <strong>A/C Number: 1350368245</strong><br>
+      <i class="fas fa-mobile-alt"></i> <strong>M-PESA Options:</strong> Buy Goods Till <strong>4052649</strong> | Paybill <strong>4052573</strong> (Account: <strong>Andolo Gideon Youths AGY</strong>)<br>
+      <i class="fas fa-hand-holding-usd"></i> Use these details when donating via project modal.
+    </div>
+  </div>
+</section>
 
-    function safeArray(arr) { return Array.isArray(arr) ? arr : []; }
-    function escapeHtml(str) { if (!str) return ''; return str.replace(/[&<>]/g, function(m) { if (m === '&') return '&amp;'; if (m === '<') return '&lt;'; if (m === '>') return '&gt;'; return m; }); }
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">📬 Connect With Us</h2>
+    <div class="contact-flex" style="display: flex; gap:2rem; flex-wrap:wrap; background:#f3f0ea; border-radius:32px; padding:2rem;">
+      <div><p><i class="fas fa-envelope"></i> hello@andologideonyouths.org</p><p><i class="fas fa-phone"></i> AGY Hotline: +2540140953226</p><p><i class="fas fa-map-marker-alt"></i> Langata, Andolo, Kenya</p><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a> <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+      <div style="flex:1"><button class="btn" onclick="alert('📧 hello@andologideonyouths.org or visit our Langata hub!')">Send Inquiry</button></div>
+    </div>
+  </div>
+</section>
 
-    function renderProjectCards() {
-      const grid = document.getElementById('projects-grid');
-      if(!grid) return;
-      grid.innerHTML = '';
-      projects.forEach(proj => {
-        let statusClass = (proj.status === 'Completed') ? 'completed' : '';
-        if(proj.status === 'Seeking Partners') statusClass = 'partners';
-        const card = document.createElement('div');
-        card.className = 'project-card';
-        card.innerHTML = `<img class="project-img" src="${proj.img}" alt="${proj.name}" loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Image+Missing'"><div class="project-content"><span class="project-status ${statusClass}">${proj.status}</span><h3>${proj.name}</h3><p>${proj.desc}</p><button class="btn view-detail" style="margin-top:0.8rem;">View Full Project →</button></div>`;
-        card.addEventListener('click', (e) => { if(!e.target.classList.contains('view-detail')) openProjectModal(proj); });
-        card.querySelector('.view-detail')?.addEventListener('click', (e) => { e.stopPropagation(); openProjectModal(proj); });
-        grid.appendChild(card);
+<footer><div class="container">© 2025 Andolo Gideon Youths — rooted in Langata, Andolo | KCB Bank A/C: 1350368245 | M-PESA Till: 4052649 / Paybill: 4052573 (AGY)</div></footer>
+
+<div id="projectModal" class="modal-overlay">
+  <div class="modal-container" id="modalContent">
+    <span class="modal-close" id="closeModal">&times;</span>
+    <div id="modalDynamic"></div>
+  </div>
+</div>
+
+<script>
+  // Preload hero images
+  const heroImages = ['images/pic%202.jpg','images/water2.jpg','images/images%20(2).jpg','images/water-1.jpg'];
+  heroImages.forEach(src => { const img = new Image(); img.src = src; });
+
+  const slides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+  if (slides.length) { slides[0].classList.add('active'); setInterval(() => { slides.forEach(s => s.classList.remove('active')); currentSlide = (currentSlide+1) % slides.length; slides[currentSlide].classList.add('active'); }, 5000); }
+
+  const projects = [
+    { id:1, name:"WASH for Schools", status:"Completed", img:"images/water.jpeg", desc:"Clean water & sanitation in Langata schools.", longDesc:"We installed water tanks, hygiene training, and reduced diseases by 70%.", mission:"Ensure every child has access to safe water and sanitation.", vision:"A Langata free from waterborne illness.", team:["Grace A. (Lead)", "John M. (Engineer)", "Community Health Volunteers"], funders:["UNICEF","WaterAid","Local Donors"], gallery:["images/water.jpeg","images/water2.jpg","images/water-1.jpg"] },
+    { id:2, name:"Digital Ambassadors Program", status:"Ongoing", img:"images/IM3.jpg", desc:"Coding & digital skills for youth.", longDesc:"412 trained, 189 gained remote work.", mission:"Bridge digital divide in Andolo.", vision:"Digital economy access for all.", team:["Jane N. (Tech Lead)","Peter O. (Mentor)","Google Trainers"], funders:["Google.org","GIZ","Andolo Youth Fund"], gallery:["images/IM3.jpg"] },
+    { id:3, name:"Green Generation Reforestation", status:"Completed", img:"images/green/1.jpg", desc:"Tree planting & climate action.", longDesc:"15,300 trees planted, 8 nurseries.", mission:"Restore 50 acres of degraded land.", vision:"A green, climate-resilient Langata.", team:["Eunice K. (Coordinator)","Eco Rangers"], funders:["Green Belt Movement","UNDP"], gallery:["images/green/1.jpg","images/green/2.jpg","images/green/3.jpeg","images/green/4.jpg","images/green/5.jpg","images/green/6.jpg","images/green/7.jpg","images/green/8.jpg"] },
+    { id:4, name:"Youth Entrepreneurship Hub", status:"Ongoing", img:"images/farming/4.jpg", desc:"Incubation & seed funding.", longDesc:"27 startups launched, KES 10M+ revenue.", mission:"Empower young entrepreneurs.", vision:"Thriving local economy.", team:["Brian O. (Business Coach)","Sharon W. (Finance)","Local Mentors"], funders:["Mastercard Foundation","Andolo SACCO"], gallery:["images/farming/4.jpg"] },
+    { id:5, name:"Poultry Farming Co-op", status:"Upcoming", img:"images/farming/1.jpeg", desc:"Modern poultry training for 200 youth.", longDesc:"Goal: 1.85M KES, sustainable income.", mission:"Nutrition & economic empowerment.", vision:"Self-sufficient farming communities.", team:["Dr. Kimani (Agronomist)","Co-op Leaders"], funders:["FAO","Langata County"], gallery:["images/farming/1.jpeg","images/farming/2.jpg","images/farming/3.png","images/farming/4.jpg","images/farming/5.jpg","images/farming/6.jpg","images/farming/7.jpg"] },
+    { id:6, name:"Comprehensive Care Initiative", status:"Upcoming", img:"images/care.jpg", desc:"Mobile health clinic & mental wellness.", longDesc:"Serve 5,000+ residents.", mission:"Healthcare access for all.", vision:"Healthy communities.", team:["Dr. Lydia (Medical Lead)","Counsellors"], funders:["AMREF","WHO"], gallery:["images/care.jpg"] },
+    { id:7, name:"Sound Production Studio", status:"Upcoming", img:"images/sound/1.jpg", desc:"Music & podcasting hub.", longDesc:"Target: 1.2M KES, train 150 youth.", mission:"Creative expression & media skills.", vision:"Arts as economic driver.", team:["DJ Kevo (Producer)","Media Trainers"], funders:["Goethe Institute","Local Artists"], gallery:["images/sound/1.jpg","images/sound/2.jpg","images/sound/3.jpg","images/sound/4.jpg","images/sound/5.jpg","images/sound/6.jpg","images/sound/7.web","images/sound/8.jpg"] },
+    { id:8, name:"Recycling & Waste Management Website", status:"Upcoming", img:"images/waste/4.jpg", desc:"Digital platform for waste recycling.", longDesc:"Target: 2.95M KES, circular economy.", mission:"Zero plastic waste in Andolo.", vision:"Clean environment, green jobs.", team:["Tech for Good (Devs)","Youth Recyclers"], funders:["UNEP","NEMA"], gallery:["images/waste/4.jpg","images/waste/1.web","images/waste/2.jpg","images/waste/3.jpg"] },
+    { id:9, name:"Andolo Art Gallery Godown", status:"Upcoming", img:"images/GoDown.jpg", desc:"Convert warehouse into art gallery.", longDesc:"Target: 3.2M KES, cultural hub.", mission:"Celebrate Andolo's creativity.", vision:"Art as transformation.", team:["Curator Mary","Local Artists Collective"], funders:["Kenya Cultural Trust","Artists for Change"], gallery:["images/GoDown.jpg"] },
+    { id:10, name:"Youth Roller-Skating Recreation", status:"Upcoming", img:"images/skating.jpg", desc:"Skating rink & leadership camps.", longDesc:"Target: 1.78M KES, promote unity.", mission:"Sports for youth development.", vision:"Active, engaged youth.", team:["Coach Ali","Recreation Leaders"], funders:["Sports Kenya","Local Business"], gallery:["images/skating.jpg"] },
+    { id:11, name:"Langata Children's Home & Hope Center", status:"Ongoing", img:"images/children.jpg", desc:"Safe shelter, education & care.", longDesc:"Providing 50 children with housing, food, school fees.", mission:"Every child deserves love, safety, and opportunity.", vision:"A Langata where no child grows up alone.", team:["Sarah Otieno (Director)","Child Psychologist"], funders:["Save the Children","Local Philanthropists"], gallery:["images/children.jpg"] },
+    { id:12, name:"AGY Feeding Program", status:"Seeking Partners", img:"images/feeding/013.jpg", desc:"School meals & community nutrition – launched May 23rd, self-funded but calling global partners.", longDesc:"Launched on 23rd May 2025, this program combats chronic hunger in Langata & Andolo, providing daily nutritious meals to 800+ children and vulnerable households. Currently self-funded by AGY members, we urgently need institutional partners like UNICEF, WHO, and well-wishers to scale to 5,000 beneficiaries.", mission:"Zero hunger in Langata by 2027 through sustainable feeding and local food systems.", vision:"A nourished generation ready to learn, lead, and thrive.", team:["Gideon Andolo (Coordinator)","Chef Mary (Nutritionist)","Community Volunteers"], funders:["Self-funded (May 2025 launch)","UNICEF (target)","WHO (target)","Well-wishers needed"], 
+      media: [
+        { type: "image", src: "images/feeding/013.jpg", caption: "Feeding program launch" },
+        { type: "image", src: "images/feeding/014.jpg", caption: "Community kitchen" },
+        { type: "image", src: "images/feeding/016.jpg", caption: "Children receiving meals" },
+        { type: "image", src: "images/feeding/018.jpg", caption: "Nutritious food" },
+        { type: "image", src: "images/feeding/023.jpg", caption: "Volunteers at work" },
+        { type: "image", src: "images/feeding/01.jpg", caption: "Food distribution" },
+        { type: "image", src: "images/feeding/05.jpg", caption: "Happy beneficiaries" },
+        { type: "video", src: "images/feeding/007.mp4", caption: "Meal preparation", poster: "images/feeding/013.jpg" },
+        { type: "video", src: "images/feeding/009.mp4", caption: "Community impact", poster: "images/feeding/013.jpg" },
+        { type: "video", src: "images/feeding/002.mp4", caption: "Daily feeding", poster: "images/feeding/013.jpg" }
+      ]
+    }
+  ];
+
+  const pdfDocuments = [
+    { name: "AGY Feeding Program Proposal", description: "Full proposal for UNICEF, WHO & partners. Includes budget and timeline.", file: "pdfs/agy_feeding_proposal.pdf" },
+    { name: "WASH for Schools Funding Proposal", description: "Clean water & sanitation project – seeking donors.", file: "pdfs/wash_proposal.pdf" },
+    { name: "Youth Entrepreneurship Hub Business Plan", description: "Incubation program overview and financial projections.", file: "pdfs/entrepreneurship_plan.pdf" },
+    { name: "Green Generation Reforestation Report", description: "Impact report and next phase funding request.", file: "pdfs/green_report.pdf" },
+    { name: "Comprehensive Care Initiative Budget", description: "Healthcare & mental wellness program breakdown.", file: "pdfs/care_budget.pdf" },
+    { name: "Andolo Art Gallery Godown Proposal", description: "Cultural hub conversion – investment opportunity.", file: "pdfs/art_gallery_proposal.pdf" }
+  ];
+
+  function safeArray(arr) { return Array.isArray(arr) ? arr : []; }
+  function escapeHtml(str) { if (!str) return ''; return str.replace(/[&<>]/g, function(m) { if (m === '&') return '&amp;'; if (m === '<') return '&lt;'; if (m === '>') return '&gt;'; return m; }); }
+
+  function renderProjectCards() {
+    const grid = document.getElementById('projects-grid');
+    if(!grid) return;
+    grid.innerHTML = '';
+    projects.forEach(proj => {
+      let statusClass = (proj.status === 'Completed') ? 'completed' : '';
+      if(proj.status === 'Seeking Partners') statusClass = 'partners';
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      card.innerHTML = `<img class="project-img" src="${proj.img}" alt="${proj.name}" loading="lazy" onerror="this.src='https://placehold.co/300x200?text=Image+Missing'"><div class="project-content"><span class="project-status ${statusClass}">${proj.status}</span><h3>${proj.name}</h3><p>${proj.desc}</p><button class="btn view-detail" style="margin-top:0.8rem;">View Full Project →</button></div>`;
+      card.addEventListener('click', (e) => { if(!e.target.classList.contains('view-detail')) openProjectModal(proj); });
+      card.querySelector('.view-detail')?.addEventListener('click', (e) => { e.stopPropagation(); openProjectModal(proj); });
+      grid.appendChild(card);
+    });
+  }
+
+  function openProjectModal(project) {
+    const modal = document.getElementById('projectModal');
+    const modalDynamic = document.getElementById('modalDynamic');
+    if(!modalDynamic) return;
+
+    let galleryHtml = '';
+    if (project.media && project.media.length) {
+      galleryHtml = `<h3>📸 Media Gallery (Images & Videos)</h3><div class="flex-gallery">`;
+      project.media.forEach(item => {
+        if (item.type === 'image') {
+          galleryHtml += `<div class="gallery-item"><img src="${item.src}" alt="${item.caption}" loading="lazy" onerror="this.src='https://placehold.co/250x180?text=Image+Missing'"><div class="gallery-caption">${escapeHtml(item.caption)}</div></div>`;
+        } else if (item.type === 'video') {
+          galleryHtml += `<div class="gallery-item"><video controls poster="${item.poster || ''}" preload="metadata"><source src="${item.src}" type="video/mp4">Your browser does not support the video tag.</video><div class="gallery-caption">${escapeHtml(item.caption)}</div></div>`;
+        }
       });
+      galleryHtml += `</div>`;
+    } else {
+      const gallery = safeArray(project.gallery);
+      if (gallery.length) {
+        galleryHtml = `<h3>📸 Project Gallery</h3><div class="flex-gallery">${gallery.map(url => `<div class="gallery-item"><img src="${url}" loading="lazy" onerror="this.src='https://placehold.co/250x180?text=Image+Missing'"></div>`).join('')}</div>`;
+      } else {
+        galleryHtml = '<p>Gallery coming soon.</p>';
+      }
     }
 
-    function openProjectModal(project) {
-      const modal = document.getElementById('projectModal');
-      const modalDynamic = document.getElementById('modalDynamic');
-      if(!modalDynamic) return;
+    const team = safeArray(project.team);
+    const funders = safeArray(project.funders);
+    const teamHtml = team.length ? `<h3>👥 Team Working on This Project</h3><div class="team-flex">${team.map(name => `<div class="team-card"><i class="fas fa-user"></i> ${escapeHtml(name)}</div>`).join('')}</div>` : '';
+    const fundersHtml = funders.length ? `<h3>🤝 Funders & Partners</h3><div class="funder-flex">${funders.map(f => `<div class="funder-card"><i class="fas fa-handshake"></i> ${escapeHtml(f)}</div>`).join('')}</div>` : '';
+    
+    let proposalHtml = '';
+    if(project.id === 12) {
+      proposalHtml = `<div class="proposal-box"><i class="fas fa-file-alt"></i> <strong>📢 Funding Proposal: AGY Feeding Program (UNICEF, WHO & well-wishers)</strong><br><br>
+      <strong>📅 Launch:</strong> 23rd May 2025 (Self-funded)<br>
+      <strong>📍 Location:</strong> Langata & Andolo, Kenya<br>
+      <strong>🎯 Problem:</strong> 1,200+ children face chronic hunger.<br>
+      <strong>✅ Objectives:</strong> Scale to 5,000 beneficiaries, community kitchen, gardens.<br>
+      <strong>💰 Budget Ask:</strong> $85,000 (KES 11M) for 12 months.<br>
+      <strong>🤝 Why partner with UNICEF/WHO:</strong> Aligns with SDG 2. <a href="https://www.un.org/sustainabledevelopment/wp-content/uploads/2023/09/Goal-4_Fast-Facts.pdf" target="_blank">📘 UN SDG Goal 4 Fast Facts (PDF)</a><br>
+      <strong>📈 Impact projection:</strong> 70% reduction in malnutrition, 95% attendance improvement.<br>
+      <i class="fas fa-hand-holding-heart"></i> We invite UNICEF, WHO, and well-wishers to co-fund.</div>`;
+    }
 
-      // Build gallery HTML (flex gallery)
-      let galleryHtml = '';
-      if (project.media && project.media.length) {
-        galleryHtml = `<h3>📸 Media Gallery (Images & Videos)</h3><div class="flex-gallery">`;
-        project.media.forEach(item => {
-          if (item.type === 'image') {
-            galleryHtml += `<div class="gallery-item"><img src="${item.src}" alt="${item.caption}" loading="lazy" onerror="this.src='https://placehold.co/250x180?text=Image+Missing'"><div class="gallery-caption">${escapeHtml(item.caption)}</div></div>`;
-          } else if (item.type === 'video') {
-            galleryHtml += `<div class="gallery-item"><video controls poster="${item.poster || ''}" preload="metadata"><source src="${item.src}" type="video/mp4">Your browser does not support the video tag.</video><div class="gallery-caption">${escapeHtml(item.caption)}</div></div>`;
-          }
-        });
-        galleryHtml += `</div>`;
-      } else {
-        const gallery = safeArray(project.gallery);
-        if (gallery.length) {
-          galleryHtml = `<h3>📸 Project Gallery</h3><div class="flex-gallery">${gallery.map(url => `<div class="gallery-item"><img src="${url}" loading="lazy" onerror="this.src='https://placehold.co/250x180?text=Image+Missing'"></div>`).join('')}</div>`;
-        } else {
-          galleryHtml = '<p>Gallery coming soon.</p>';
-        }
-      }
+    const missionVision = `<div style="background:#f9f4ea; border-radius:28px; padding:1rem; margin:1rem 0;"><p><strong>🌟 Mission:</strong> ${escapeHtml(project.mission || 'Empower youth and community in Langata, Andolo.')}</p><p><strong>🎯 Vision:</strong> ${escapeHtml(project.vision || 'Sustainable transformation for generations.')}</p></div>`;
 
-      const team = safeArray(project.team);
-      const funders = safeArray(project.funders);
-      const teamHtml = team.length ? `<h3>👥 Team Working on This Project</h3><div class="team-flex">${team.map(name => `<div class="team-card"><i class="fas fa-user"></i> ${escapeHtml(name)}</div>`).join('')}</div>` : '';
-      const fundersHtml = funders.length ? `<h3>🤝 Funders & Partners</h3><div class="funder-flex">${funders.map(f => `<div class="funder-card"><i class="fas fa-handshake"></i> ${escapeHtml(f)}</div>`).join('')}</div>` : '';
-      
-      let proposalHtml = '';
-      if(project.id === 12) {
-        proposalHtml = `<div class="proposal-box"><i class="fas fa-file-alt"></i> <strong>📢 Funding Proposal: AGY Feeding Program (UNICEF, WHO & well-wishers)</strong><br><br>
-        <strong>📅 Launch:</strong> 23rd May 2025 (Self-funded)<br>
-        <strong>📍 Location:</strong> Langata & Andolo, Kenya<br>
-        <strong>🎯 Problem:</strong> 1,200+ children face chronic hunger.<br>
-        <strong>✅ Objectives:</strong> Scale to 5,000 beneficiaries, community kitchen, gardens.<br>
-        <strong>💰 Budget Ask:</strong> $85,000 (KES 11M) for 12 months.<br>
-        <strong>🤝 Why partner with UNICEF/WHO:</strong> Aligns with SDG 2. <a href="https://www.un.org/sustainabledevelopment/wp-content/uploads/2023/09/Goal-4_Fast-Facts.pdf" target="_blank">📘 UN SDG Goal 4 Fast Facts (PDF)</a><br>
-        <strong>📈 Impact projection:</strong> 70% reduction in malnutrition, 95% attendance improvement.<br>
-        <i class="fas fa-hand-holding-heart"></i> We invite UNICEF, WHO, and well-wishers to co-fund.</div>`;
-      }
+    modalDynamic.innerHTML = `
+      <div class="modal-logo"><img src="images/logo.png" alt="AGY Logo" onerror="this.src='https://placehold.co/200x70?text=AGY'"></div>
+      <h2 style="color:#0f2c2b;">${escapeHtml(project.name)}</h2>
+      <p><strong>Status:</strong> ${escapeHtml(project.status)} | <strong>Location:</strong> Langata, Andolo</p>
+      <img src="${project.img}" style="width:100%; max-height:350px; object-fit:cover; border-radius:28px; margin:1rem 0;" onerror="this.src='https://placehold.co/800x400?text=Project+Image'">
+      <p>${escapeHtml(project.longDesc || project.desc)}</p>
+      ${missionVision}
+      ${teamHtml}
+      ${fundersHtml}
+      ${galleryHtml}
+      ${proposalHtml}
+      <hr>
+      <div class="payment-section">
+        <h3><i class="fas fa-donate"></i> Support "${escapeHtml(project.name)}" — M-PESA / Bank Transfer</h3>
+        <p><strong>M-PESA Buy Goods Till:</strong> 4052649 | <strong>Paybill:</strong> 4052573 (Account: Andolo Gideon Youths AGY)<br><strong>Bank Transfer:</strong> KCB Bank A/C 1350368245</p>
+        <form id="modalDonationForm">
+          <input type="text" id="donorName" placeholder="Your full name" class="payment-input" required>
+          <input type="number" id="donationAmount" placeholder="Amount (KES, min 50)" class="payment-input" min="50" required>
+          <div class="payment-method">
+            <label><input type="radio" name="payMethod" value="mpesa_till" checked> <i class="fas fa-store"></i> M-PESA Till (4052649)</label>
+            <label><input type="radio" name="payMethod" value="mpesa_paybill"> <i class="fas fa-receipt"></i> Paybill 4052573</label>
+            <label><input type="radio" name="payMethod" value="bank"> <i class="fas fa-university"></i> Bank Transfer</label>
+          </div>
+          <button type="submit" class="donate-modal-btn" id="donateBtn"><i class="fas fa-heart"></i> Complete Donation (Real-Time)</button>
+          <div id="modalDonationSuccess" class="modal-success"></div>
+        </form>
+      </div>
+    `;
 
-      const missionVision = `<div style="background:#f9f4ea; border-radius:28px; padding:1rem; margin:1rem 0;"><p><strong>🌟 Mission:</strong> ${escapeHtml(project.mission || 'Empower youth and community in Langata, Andolo.')}</p><p><strong>🎯 Vision:</strong> ${escapeHtml(project.vision || 'Sustainable transformation for generations.')}</p></div>`;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
 
-      modalDynamic.innerHTML = `
-        <div class="modal-logo"><img src="images/logo.png" alt="AGY Logo" onerror="this.src='https://placehold.co/200x70?text=AGY'"></div>
-        <h2 style="color:#0f2c2b;">${escapeHtml(project.name)}</h2>
-        <p><strong>Status:</strong> ${escapeHtml(project.status)} | <strong>Location:</strong> Langata, Andolo</p>
-        <img src="${project.img}" style="width:100%; max-height:350px; object-fit:cover; border-radius:28px; margin:1rem 0;" onerror="this.src='https://placehold.co/800x400?text=Project+Image'">
-        <p>${escapeHtml(project.longDesc || project.desc)}</p>
-        ${missionVision}
-        ${teamHtml}
-        ${fundersHtml}
-        ${galleryHtml}
-        ${proposalHtml}
-        <hr>
-        <div class="payment-section">
-          <h3><i class="fas fa-donate"></i> Support "${escapeHtml(project.name)}" — M-PESA / Bank Transfer</h3>
-          <p><strong>M-PESA Buy Goods Till:</strong> 4052649 | <strong>Paybill:</strong> 4052573 (Account: Andolo Gideon Youths AGY)<br><strong>Bank Transfer:</strong> KCB Bank A/C 1350368245</p>
-          <form id="modalDonationForm">
-            <input type="text" id="donorName" placeholder="Your full name" class="payment-input" required>
-            <input type="number" id="donationAmount" placeholder="Amount (KES, min 50)" class="payment-input" min="50" required>
-            <div class="payment-method">
-              <label><input type="radio" name="payMethod" value="mpesa_till" checked> <i class="fas fa-store"></i> M-PESA Till (4052649)</label>
-              <label><input type="radio" name="payMethod" value="mpesa_paybill"> <i class="fas fa-receipt"></i> Paybill 4052573</label>
-              <label><input type="radio" name="payMethod" value="bank"> <i class="fas fa-university"></i> Bank Transfer</label>
-            </div>
-            <button type="submit" class="donate-modal-btn" id="donateBtn"><i class="fas fa-heart"></i> Complete Donation (Real-Time)</button>
-            <div id="modalDonationSuccess" class="modal-success"></div>
-          </form>
+    const form = document.getElementById('modalDonationForm');
+    const donateBtn = document.getElementById('donateBtn');
+    if(form && donateBtn) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (donateBtn.disabled) return;
+        const donorName = document.getElementById('donorName').value.trim();
+        const amount = parseFloat(document.getElementById('donationAmount').value);
+        const method = document.querySelector('input[name="payMethod"]:checked').value;
+        const successDiv = document.getElementById('modalDonationSuccess');
+        if(!donorName) { alert("Please enter your name."); return; }
+        if(isNaN(amount) || amount < 50) { alert("Minimum donation 50 KES."); return; }
+        donateBtn.disabled = true;
+        successDiv.style.display = 'block';
+        successDiv.innerHTML = `<i class="fas fa-spinner fa-pulse"></i> Processing...`;
+        setTimeout(() => {
+          let txRef = `AGY${Math.floor(Math.random()*1000000)}`;
+          let msg = '';
+          if(method === 'mpesa_till') msg = `✅ M-PESA Till 4052649<br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} sent. TXN: ${txRef}. Asante!`;
+          else if(method === 'mpesa_paybill') msg = `📞 Paybill 4052573<br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} paid. Ref: ${txRef}. Thank you!`;
+          else msg = `🏦 Bank Transfer (KCB 1350368245)<br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} recorded. Ref: ${txRef}.`;
+          successDiv.innerHTML = msg;
+          document.getElementById('donorName').value = '';
+          document.getElementById('donationAmount').value = '';
+          donateBtn.disabled = false;
+          setTimeout(() => successDiv.style.display = 'none', 7000);
+        }, 1500);
+      });
+    }
+  }
+
+  function renderPdfCards() {
+    const grid = document.getElementById('pdfGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    pdfDocuments.forEach(pdf => {
+      const card = document.createElement('a');
+      card.className = 'pdf-card';
+      card.href = pdf.file;
+      card.target = '_blank';
+      card.innerHTML = `
+        <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+        <div class="pdf-info">
+          <h3>${escapeHtml(pdf.name)}</h3>
+          <p>${escapeHtml(pdf.description)}</p>
         </div>
       `;
-
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-
-      const form = document.getElementById('modalDonationForm');
-      const donateBtn = document.getElementById('donateBtn');
-      if(form && donateBtn) {
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          if (donateBtn.disabled) return;
-          const donorName = document.getElementById('donorName').value.trim();
-          const amount = parseFloat(document.getElementById('donationAmount').value);
-          const method = document.querySelector('input[name="payMethod"]:checked').value;
-          const successDiv = document.getElementById('modalDonationSuccess');
-          if(!donorName) { alert("Please enter your name."); return; }
-          if(isNaN(amount) || amount < 50) { alert("Minimum donation 50 KES."); return; }
-          donateBtn.disabled = true;
-          successDiv.style.display = 'block';
-          successDiv.innerHTML = `<i class="fas fa-spinner fa-pulse"></i> Processing...`;
-          setTimeout(() => {
-            let txRef = `AGY${Math.floor(Math.random()*1000000)}`;
-            let msg = '';
-            if(method === 'mpesa_till') msg = `✅ M-PESA Till 4052649<br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} sent. TXN: ${txRef}. Asante!`;
-            else if(method === 'mpesa_paybill') msg = `📞 Paybill 4052573<br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} paid. Ref: ${txRef}. Thank you!`;
-            else msg = `🏦 Bank Transfer (KCB 1350368245)<br>${escapeHtml(donorName)}, KES ${amount.toLocaleString()} recorded. Ref: ${txRef}.`;
-            successDiv.innerHTML = msg;
-            document.getElementById('donorName').value = '';
-            document.getElementById('donationAmount').value = '';
-            donateBtn.disabled = false;
-            setTimeout(() => successDiv.style.display = 'none', 7000);
-          }, 1500);
-        });
-      }
-    }
-
-    const modalOverlay = document.getElementById('projectModal');
-    const closeModalBtn = document.getElementById('closeModal');
-    function closeModal() { modalOverlay.classList.remove('active'); document.body.style.overflow = 'auto'; }
-    if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', (e) => { if(e.target === modalOverlay) closeModal(); });
-
-    function animateNumbers() {
-      const statNumbers = document.querySelectorAll('.stat-number');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            const el = entry.target;
-            const target = parseInt(el.getAttribute('data-target'),10);
-            let current = 0;
-            const step = target/45;
-            const update = () => { current += step; if(current < target) { el.innerText = Math.floor(current); requestAnimationFrame(update); } else { el.innerText = target; } };
-            update();
-            observer.unobserve(el);
-          }
-        });
-      }, { threshold:0.2 });
-      statNumbers.forEach(n => observer.observe(n));
-    }
-
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const id = this.getAttribute('href').substring(1);
-        const el = document.getElementById(id);
-        if(el) el.scrollIntoView({ behavior:'smooth' });
-      });
+      grid.appendChild(card);
     });
+  }
 
-    renderProjectCards();
-    animateNumbers();
+  const modalOverlay = document.getElementById('projectModal');
+  const closeModalBtn = document.getElementById('closeModal');
+  function closeModal() { modalOverlay.classList.remove('active'); document.body.style.overflow = 'auto'; }
+  if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', (e) => { if(e.target === modalOverlay) closeModal(); });
 
-    // Deep-link support
-    const urlParams = new URLSearchParams(window.location.search);
-    const projectSlug = urlParams.get('project');
-    if (projectSlug) {
-      const slugToId = {
-        'wash-for-schools':1, 'digital-ambassadors':2, 'green-generation':3, 'youth-entrepreneurship-hub':4,
-        'poultry-farming-coop':5, 'comprehensive-care':6, 'sound-production-studio':7, 'recycling-waste-management':8,
-        'andolo-art-gallery':9, 'youth-roller-skating':10, 'langata-childrens-home':11, 'agy-feeding-program':12
-      };
-      const projectId = slugToId[projectSlug];
-      if (projectId) {
-        setTimeout(() => {
-          const project = projects.find(p => p.id === projectId);
-          if (project) openProjectModal(project);
-        }, 800);
-      }
+  function animateNumbers() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-target'),10);
+          let current = 0;
+          const step = target/45;
+          const update = () => { current += step; if(current < target) { el.innerText = Math.floor(current); requestAnimationFrame(update); } else { el.innerText = target; } };
+          update();
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold:0.2 });
+    statNumbers.forEach(n => observer.observe(n));
+  }
+
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').substring(1);
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({ behavior:'smooth' });
+    });
+  });
+
+  renderProjectCards();
+  renderPdfCards();
+  animateNumbers();
+
+  // Deep-link support
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectSlug = urlParams.get('project');
+  if (projectSlug) {
+    const slugToId = {
+      'wash-for-schools':1, 'digital-ambassadors':2, 'green-generation':3, 'youth-entrepreneurship-hub':4,
+      'poultry-farming-coop':5, 'comprehensive-care':6, 'sound-production-studio':7, 'recycling-waste-management':8,
+      'andolo-art-gallery':9, 'youth-roller-skating':10, 'langata-childrens-home':11, 'agy-feeding-program':12
+    };
+    const projectId = slugToId[projectSlug];
+    if (projectId) {
+      setTimeout(() => {
+        const project = projects.find(p => p.id === projectId);
+        if (project) openProjectModal(project);
+      }, 800);
     }
-  </script>
+  }
+</script>
 </body>
 </html>
